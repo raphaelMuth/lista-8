@@ -1,0 +1,53 @@
+1 ->
+Pessoa(Eu)
+Pássaro(Marcelo)
+Peixe(Silvio)
+Minhoca(Ana)
+Gato(Chuck Norris)
+Gosta(Marcelo, Ana)
+Gosta(Chuck Norris, Silvio)
+Gosta(Chuck Norris, Marcelo)
+Gosta(Chuck Norris, Eu)
+Gosta(Eu, Chuck Norris)
+Amigos(Chuck Norrus, Eu)
+Come(Chuck Norris, Silvio)
+Come(Chuck Norris, Marcelo)
+
+2 ->
+Homem(Marcos), Homem(Fabiano), Homem(Silvio)
+Mulher(Maria), Mulher(Ana)
+Bonito(Marcos), Bonito(Fabiano)
+Bonita(Maria)
+Rico(Marcos)
+Rica(Ana)
+Amável(Silvio)
+Forte(Ana), Forte(Fabiano), Forte(Silvio)
+
+Gosta(Homem, Bonita)
+Feliz(Homem, Rico)
+Feliz(Gosta(Homem, Mulher), Gosta(Mulher, Homem))
+Feliz(Gosta(Mulher, Homem), Gosta(Homem, Mulher))
+Gosta(Ana, Gosta(Homem, Ana))
+Gosta(Maria, Gosta(Homem, Maria)) :- Homem(Rico),Homem(Amável);Homem(Bonito),Homem(Forte)
+
+3 ->
+a)
+
+Aluno(A,B) :- Frequenta(A,B)
+Professor(A,B) :- Funcionario(A,B)
+Aluno(A,B) :- Professor(A,B)
+
+b)
+
+Aluno(A,B) :- Frequenta(A,B)
+Professor(A,B) :- Funcionario(A,B)
+Frequenta(A,B) :- Funcionario(A,B)
+
+4->
+
+Aprovado(Nota(x,y), z) :- Z >= 7
+Recuperação(Nota(x,y), z) :- Z >= 5, Z <= 6.9
+Reprocado(Nota(x,y), z) := Z <= 4.9
+
+
+
